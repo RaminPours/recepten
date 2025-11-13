@@ -154,10 +154,3 @@ textarea {
   color: #666;
 }
 
-
-/* ===- mobile responsive ==== */
-@media (min-width: 768px) {
-  .container {
-    font-size: 1rem;
-  }
-}
