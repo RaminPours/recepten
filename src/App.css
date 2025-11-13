@@ -1,0 +1,163 @@
+/* ===== ALGEMENE INSTELLINGEN ===== */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --accent: #111;
+  --light: #e9e9e9;
+  --radius: 10px;
+  --redAdd: #c93838;
+  --beauty: rgba(228, 235, 220, 0.671);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--beauty);
+  color: var(--text);
+  margin: 0;
+}
+
+/* ===== CONTAINER  ===== */
+.container {
+  max-width: 900px;
+  padding: 25px;
+  margin: 0 auto;
+}
+
+/* ===== TITELS ===== */
+h1, h2, h3 {
+  margin: 0.5em 0;
+}
+
+/* =====  titel + knop) ===== */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* ===== KNOPPEN ===== */
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn {
+  background: var(--redAdd);
+  color: white;
+}
+
+/* === EXTRA INGREDIËNTEN TOEVOEGEN OF VERWIJDEREN ======= */ 
+.btn.secondary {
+  background: var(--light);
+  color: var(--text);
+  text-decoration: none;
+  
+}
+
+/* ===== INVOERVELDEN EN TEKSTVLAKKEN ===== */
+.input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.image-input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+}
+
+
+textarea {
+  min-height: 150px;
+  resize: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ===== LAY-OUT  ===== */
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ===== GRID VOOR RECEPTEN ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+/* ===== KAARTEN ===== */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition: transform 0.15s ease;
+  margin-top: 12px;
+}
+
+.card:hover {
+  transform: translateY(3px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .body {
+  padding: 16px;
+}
+
+/* ===== FOTO IN List ===== */
+.hero {
+  width: 100%;
+  height: 230px;
+  border-radius: var(--radius);
+  margin-top: 10px;
+}
+
+/* ===== KLEINE TEKSTEN ===== */
+.meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.badge {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ===== (bij geen resultaten of fout) ===== */
+.center {
+  display: grid;
+  place-items: center;
+  color: #666;
+}
+
+
+/* ===- mobile responsive ==== */
+@media (min-width: 768px) {
+  .container {
+    font-size: 1rem;
+  }
+}
