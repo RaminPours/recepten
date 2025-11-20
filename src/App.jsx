@@ -32,7 +32,7 @@ export default function App() {
   const [open, setOpen] = useState(false);
   
 
-  // url om te delen (app home)
+  // url om te delen 
   const shareUrl = window.location.origin;
   const shareText = "Bekijk mijn recepten!";
 
@@ -65,7 +65,7 @@ export default function App() {
           transition: "width 0.25s ease",
         }}
       >
-        {/* Toggle-knop */}
+        {/* Menu inklappen */}
         <button
           onClick={() => setOpen((prev) => !prev)}
           style={{
@@ -118,22 +118,23 @@ export default function App() {
           </NavLink>
         </nav>
 
-        {open ? <h4 style={{marginTop: "70px"}}>Deel je recepten!</h4> : ""}
+        {open ? <h4 style={{marginTop: "50px"}}>Deel je recepten!</h4> : ""}
        {open && (<div style={{display: "flex", gap: "10px", marginTop: "20px"}}>
-      <FacebookMessengerShareButton url="shareUrl">
+      
+      <FacebookMessengerShareButton url="shareUrl" share="shareText">
       <FacebookIcon size={30} borderRadius={30}></FacebookIcon>
       </FacebookMessengerShareButton> 
       
-      <WhatsappShareButton url="shareUrl">
+      <WhatsappShareButton url="shareUrl" share="shareText">
       <WhatsappIcon size={30} borderRadius={30}></WhatsappIcon>
       </WhatsappShareButton>
 
-      <TwitterShareButton url="shareUrl">
+      <TwitterShareButton url="shareUrl" share="shareText">
         <TwitterIcon size={30} borderRadius={30}></TwitterIcon>
       </TwitterShareButton>  
 
-      <EmailShareButton url="shareUrl">
-        <EmailIcon size={30} borderRadius={30}></EmailIcon>
+      <EmailShareButton url="shareUrl" share="shareText">
+      <EmailIcon size={30} borderRadius={30}></EmailIcon>
       </EmailShareButton>
       </div>)}          
       </aside>
