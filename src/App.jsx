@@ -121,19 +121,19 @@ export default function App() {
         {open ? <h4 style={{marginTop: "50px"}}>Deel je recepten!</h4> : ""}
        {open && (<div style={{display: "flex", gap: "10px", marginTop: "20px"}}>
       
-      <FacebookMessengerShareButton url="shareUrl" share="shareText">
+      <FacebookMessengerShareButton url={shareUrl} title={shareText}>
       <FacebookIcon size={30} borderRadius={30}></FacebookIcon>
       </FacebookMessengerShareButton> 
       
-      <WhatsappShareButton url="shareUrl" share="shareText">
+      <WhatsappShareButton url={shareUrl} title={shareText}>
       <WhatsappIcon size={30} borderRadius={30}></WhatsappIcon>
       </WhatsappShareButton>
 
-      <TwitterShareButton url="shareUrl" share="shareText">
+      <TwitterShareButton url={shareUrl} title={shareText}>
         <TwitterIcon size={30} borderRadius={30}></TwitterIcon>
       </TwitterShareButton>  
 
-      <EmailShareButton url="shareUrl" share="shareText">
+      <EmailShareButton url={shareUrl} title={shareText}>
       <EmailIcon size={30} borderRadius={30}></EmailIcon>
       </EmailShareButton>
       </div>)}          
